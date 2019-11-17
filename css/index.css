@@ -1,0 +1,234 @@
+.content_index{
+   /*background: #015ab4; */
+   background-image:url(../images/indexbg.png);
+   background-size: 100%;
+   padding-bottom:70px;
+   padding-top:calc(100vh/2.1);
+}
+img{
+  
+  width:100%;
+}
+/*弹出层*/
+body.cover{
+  overflow: hidden;
+}
+
+div.masklayer{
+  width:100%;
+  height:100vh;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  z-index:100;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+div.masklayer>div.popUp{
+   width:70%;
+   position: relative;
+}
+div.masklayer>div.popUp>img.kill{
+   position: absolute;
+   right:0;
+   width:15%;
+}
+div.masklayer>div.popUp>button{
+   background: #f7d608;
+   position: absolute;
+   bottom:10%;
+   left:30%;
+   width:10rem;
+   height:3rem; 
+   box-shadow: 1px 2px #be9518;
+   border-radius:1.5rem; 
+}
+/*公告*/
+marquee{
+  color:#fff;
+  background: rgba(0,0,0,0.3);
+  line-height: 3rem;
+  width:100%;
+}
+/* 顶部搜索 */
+header{
+    width:100%;
+    background:#fff;
+    padding:10px 0;
+}
+header>input{
+    display:block;
+    width:95%;
+    border:1px solid #9c9c9c;
+    border-radius:5px;
+    height:3.5rem;
+    margin:auto;
+    text-align: center
+}
+/* 学校Login */
+img.schoolLogin{
+  display:block;
+  width:40%;
+  margin-left:1rem;
+  margin-bottom:2rem; 
+  margin-top:10px;
+}
+img.rangking{
+  display:block;
+  width:40%;
+ margin-left:1rem;
+  margin-top:2rem;
+  margin-bottom:2rem; 
+}
+
+div.school>ul>li>button{
+    width:70%;
+    background: #f5c824;
+    border:none;
+    color:#fff;
+    height:2.2rem;
+    line-height: 2.2rem;
+    border-radius:1.1rem;
+    font-size:1.5rem;
+    font-weight: bold;
+    box-shadow: 1px 2px  #da9a00;
+}
+
+div.school>ul>li>button.viewprogress{
+  background: #37bede;
+  box-shadow: 1px 2px  #169ab9;
+}
+div.school>ul>li>div.schoolbg{
+    margin-bottom:1.5rem; 
+    position: relative;
+    text-align: center;
+}
+div.scfont{
+    position:absolute;
+    top:1.5rem;
+    color:#f5c824;
+    width:100%;
+}
+div.scfont>p{
+    font-size:1.5rem;
+    margin:auto;
+    margin-bottom:0.7rem;
+}
+div.scfont>span{
+   color:#fff;
+   font-size:1rem;
+   background:rgba(0,0,0,0.5);
+   padding:5px;
+}
+div.scfont>span>i{
+    color:#f5c824;
+}
+
+div.scfont>span>span{
+      color:#f5c824; 
+}
+/*排行，推荐*/
+#demo>li{
+  margin-top: 1rem;
+}
+#demo>li>div.best{
+    display:flex;
+    color:#fff;
+    background:rgba(0,0,0,0.4);
+    justify-content: space-around;
+    align-items: center;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+}
+#demo>li>div.best>span{
+   display: block;
+   height:2.5rem;
+   border:0.3px solid; 
+  transform:rotate(15deg);
+  -ms-transform:rotate(15deg);   /* IE 9 */
+  -moz-transform:rotate(15deg);  /* Firefox */
+  -webkit-transform:rotate(15deg); /* Safari 和 Chrome */
+  -o-transform:rotate(15deg);  /* Opera */
+}
+#demo>li>div.best_banner{
+    position: relative;
+}
+#demo>li>div.best_banner>span{
+    position:absolute;
+    display: block;
+    background:rgba(0,0,0,0.5);
+    border-bottom-right-radius:10px;
+    padding:5px 10px;
+    color:#fff;
+}
+#demo>li>div.best>div.best_name{
+  color:#fff; 
+}
+#demo>li>div.best>div.best_sum>span{
+   display: block;
+   font-size:0.7rem;
+}
+#demo>li>div.best>div.best_sum>span>span{
+  color:#FFCF10;
+}
+#demo>li>div.best>div.best_name>div{
+  display:flex;
+  align-items: baseline;
+}
+
+#demo>li>div.best>div.best_name>div>span{
+  font-size:1rem;
+  margin-left:2px;
+}
+#demo{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#demo>li>div{
+   width:90%;
+   margin:auto;
+}
+#demo>li{
+  width:50%;
+}
+.best>.best_name>div>img{
+                  width:1.2rem;
+               }
+/* 底部导航 */
+footer{
+   position: fixed;
+   bottom:0; 
+   width:100%;
+   background: #eee;
+   padding-top:10px;
+}
+footer>ul,div.school>ul{
+   list-style: none;
+   display:-webkit-flex;
+   padding:0;
+   justify-content: space-around; 
+   text-align:center; 
+   align-items: center; 
+}
+div.school>ul>li{
+   width:30%;
+   font-size:1.5rem;
+}
+footer>ul>li{
+   width:33%;
+   font-size:1.5rem;
+}
+footer>ul>li>img{
+   width:18%;
+   display: block;
+   margin:auto;
+   margin-bottom:5px;
+}
+footer>ul>li>span{
+   display:block; 
+   color:#9c9c9c;
+}
+footer>ul>li>span.activation{
+   color:#015ab4;
+}

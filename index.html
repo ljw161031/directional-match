@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <!-- <script src="js/rem.js"></script>    -->
+    <script type="text/javascript">
+      $(function initFont(){
+        var docEl = document.documentElement;   //获取html文档标签
+           // 
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+           recalc = function() {
+                    var width = docEl.getBoundingClientRect().width;
+                  if (width >2000) { // 最大宽度
+                    width =500;
+                  }
+                    var rem = width / 64; 
+                    docEl.style.fontSize = rem + 'px';
+                 };
+          recalc();
+
+        window.addEventListener(resizeEvt, recalc, false);
+        document.addEventListener('DOMContentLoaded', recalc, false);
+     });
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>首页</title>
+</head>
+<body>
+    <!-- 遮罩层、弹出框 -->
+    <div class="masklayer" style="display:none">
+        <div class="popUp">
+           <img src="images/cslo.png" class="kill">
+           <img src="images/tan.png" alt="">
+           <button class="layui-btn layui-btn-warm">组建队伍</button>
+        </div>
+    </div> 
+    <!-- 顶部搜索 -->
+    <header>
+        <input type="text" placeholder="个人姓名/队名/参赛号">
+    </header> 
+    <div class="content_index">
+      <marquee><span class="glyphicon glyphicon-volume-up"> </span> 公告：报名截止时间9月14日</marquee>
+      <img src="images/school.png" class="schoolLogin" alt="">
+      <!-- 选择学校 -->
+      <div class="school">
+         <ul>
+             <li>
+               <div class="schoolbg">
+                  <img src="images/school.jpg" alt="">
+                  <div class="scfont">  
+                      <p>西安体育学院</p>
+                      <span>
+                         <i>·</i> 
+                         <span>55</span>组参赛
+                      </span>
+                  </div> 
+               </div>
+               <button>报名</button>
+             </li>
+             <li>
+               <div class="schoolbg">
+                 <img src="images/school.jpg" alt="">  
+                 <div class="scfont">  
+                      <p>西安体育学院</p>
+                      <span>
+                         <i>·</i> 
+                         <span>55</span>组参赛
+                      </span>
+                  </div> 
+               </div>  
+               <button>报名</button>
+             </li>
+             <li> 
+               <div class="schoolbg">
+                 <img src="images/school.jpg" alt="">  
+                 <div class="scfont">  
+                      <p>西安体育学院</p>
+                      <span>
+                         <i>·</i> 
+                         <span>55</span>组参赛
+                      </span>
+                  </div> 
+               </div>
+               <button class="viewprogress">查看进度</button>
+             </li>
+         </ul>
+      </div>
+      <!-- 排行 -->
+      <img src="images/rangk.png" class="rangking">
+      <div class="rangli">
+          <ul id="demo">
+            <li>
+               <div class="best_banner">
+                  <span>排名：100</span>
+                  <img src="images/mei.png" alt="">
+               </div> 
+               <div class="best">
+                  <div class="best_name">
+                     <div>
+                         <img src="images/tema.png" alt="">
+                         <span>小熊队</span>
+                     </div>
+                     <div>
+                         <img src="images/sizeSchool.png" alt="">
+                         <span>西安体育学院</span>
+                     </div>   
+                  </div>
+                  <span></span> 
+                  <div class="best_sum">
+                     <span>已得</span>
+                     <span> <span>80</span> 票 </span>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="best_banner">
+                  <span>排名：100</span>
+                  <img src="images/mei.png" alt="">
+               </div> 
+               <div class="best">
+                  <div class="best_name">
+                     <div>
+                         <img src="images/tema.png" alt="">
+                         <span>小熊队</span>
+                     </div>
+                     <div>
+                         <img src="images/sizeSchool.png" alt="">
+                         <span>西安体育学院</span>
+                     </div>   
+                  </div>
+                  <span></span> 
+                  <div class="best_sum">
+                     <span>已得</span>
+                     <span> <span>80</span> 票 </span>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="best_banner">
+                  <span>排名：100</span>
+                  <img src="images/mei.png" alt="">
+               </div> 
+               <div class="best">
+                  <div class="best_name">
+                     <div>
+                         <img src="images/tema.png" alt="">
+                         <span>小熊队</span>
+                     </div>
+                     <div>
+                         <img src="images/sizeSchool.png" alt="">
+                         <span>西安体育学院</span>
+                     </div>   
+                  </div>
+                  <span></span> 
+                  <div class="best_sum">
+                     <span>已得</span>
+                     <span> <span>80</span> 票 </span>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="best_banner">
+                  <span>排名：100</span>
+                  <img src="images/mei.png" alt="">
+               </div> 
+               <div class="best">
+                  <div class="best_name">
+                     <div>
+                         <img src="images/tema.png" alt="">
+                         <span>小熊队</span>
+                     </div>
+                     <div>
+                         <img src="images/sizeSchool.png" alt="">
+                         <span>西安体育学院</span>
+                     </div>   
+                  </div>
+                  <span></span> 
+                  <div class="best_sum">
+                     <span>已得</span>
+                     <span> <span>80</span> 票 </span>
+                  </div>
+               </div>
+            </li>
+          </ul>  
+      </div>
+    </div>
+    <!-- 底部导航 -->
+    <footer>
+    <ul>
+        <li>
+          <img src="images/nav/icon1se.png" alt="">
+          <span class="activation">首页</span>  
+        </li>
+        <li>
+          <img src="images/nav/icon2.png" style="width:14%;">
+          <span>活动详情</span> 
+        </li>
+        <li>
+          <img src="images/nav/icon3.png" style="width:16%;">
+          <span>小游戏</span>  
+        </li>   
+    </ul>
+    </footer>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="layui.js"></script>
+    <script>
+     //瀑布流加载 
+       layui.use('flow', function(){
+        var $ = layui.jquery; //不用额外加载jQuery，flow模块本身是有依赖jQuery的，直接用即可。
+        var flow = layui.flow;
+        flow.load({
+          elem: '#demo' //指定列表容器
+          ,done: function(page, next){ //到达临界点（默认滚动触发），触发下一页
+            var lis = [];
+            //以jQuery的Ajax请求为例，请求下一页数据（注意：page是从2开始返回）
+            $.get('/api/list?page='+page, function(res){
+              //假设你的列表返回在data集合中
+              layui.each(res.data, function(index, item){
+                lis.push('<li>'+ item.title +'</li>');
+              }); 
+              //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+              //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+              next(lis.join(''), page < res.pages);    
+            });
+          }
+        });
+      });
+    </script>
+    <script>
+        // 底部导航样式切换。
+        var icon=['images/nav/icon1.png','images/nav/icon2.png','images/nav/icon3.png'];
+        var iconse=['images/nav/icon1se.png','images/nav/icon2se.png','images/nav/icon3se.png'];
+        $('footer>ul>li').click(function(){
+           $(this).children('img').attr('src',iconse[$(this).index()]);
+           $(this).children('span').addClass('activation');
+           $(this).siblings('li').children('span').removeClass('activation');
+           var index=$(this).index();
+           $("footer>ul>li").each(function(){
+              if($(this).index()!=index){
+                 console.log($(this).index())
+                 $(this).children('img').attr('src',icon[$(this).index()]);
+              }
+           })
+         })
+        // 弹出框
+        $('div.school>ul>li>button').click(function(){
+            $('div.masklayer').fadeIn();
+            $('body').addClass('cover');
+        })
+        $('div.masklayer>div.popUp>img.kill').click(function(){
+            $('div.masklayer').fadeOut();  
+            $('body').removeClass('cover');
+        })
+    </script>
+</body>
+</html>

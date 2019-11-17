@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/layui.css">
+    <script src="jquery.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="cropper/cropper.min.css" rel="stylesheet">
+	<link href="sitelogo/sitelogo.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/captain.css">
+    <script>
+       $(function(){
+       	  var top=parseInt($('img.fill_title').height())/2;
+       	  $('img.fill_title').css('top',-top);
+               var he=parseInt($('.fill').height())+100;
+          $('img.bgban').height(he);
+       })
+    </script>
+    <script type="text/javascript">
+     $(function initFont(){
+        var docEl = document.documentElement;   //获取html文档标签
+           // 
+	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+			 recalc = function() {
+				        var width = docEl.getBoundingClientRect().width;
+							if (width >2000) { // 最大宽度
+								width =500;
+							}
+				        var rem = width / 64; 
+				        docEl.style.fontSize = rem + 'px';
+				     };
+			recalc();
+		window.addEventListener(resizeEvt, recalc, false);
+		document.addEventListener('DOMContentLoaded', recalc, false);
+ }); 
+    </script>	
+	<title>队长_填写信息</title>
+</head>
+<body>
+    <div class="signsuccess" style="display:none">
+        <div class="successTan">
+          <img src="images/cslo.png" class="kill"> 
+          <img src="./images/captain/baom.png" alt="">
+          <button class="layui-btn layui-btn-warm"> <a href="">查看进度</a></button>
+        </div>
+    </div>
+    <div class="sports">
+       SPORTS 
+       <span></span>
+    </div>
+    <div class="baotitle">报名须知</div>
+    <!-- 个人信息 -->
+    <form class="fill" id="loginForm" method="post" action="">
+       <img src="./images/captain/title.png" class="fill_title">
+       <img src="./images/captain/body.png" class="bgban">
+       <div class="identity">
+           <div class="layui-form-item">
+		    <label class="layui-form-label">性别</label>
+		    <div>
+		       <img src="./images/captain/boy.png" alt="">
+		       <input type="radio" name="sex" value="男" title="男" checked="checked"> 
+		    </div>
+		    <div>
+		       <img src="./images/captain/girl.png" alt="">
+		       <input type="radio" name="sex" value="女" title="女"> 
+		    </div>
+		  </div>
+		  <div class="input-group">
+			  <span class="input-group-addon" id="basic-addon1"><span>※</span>&nbsp;姓名</span>
+			  <input type="text" class="form-control" placeholder="请输入姓名" aria-describedby="basic-addon1">
+		  </div>
+		  <div class="input-group" >
+			  <span class="input-group-addon" id="basic-addon2"><span>※</span>&nbsp;手机号码</span>
+			  <input type="text" class="form-control" placeholder="请输入11位手机号码" aria-describedby="basic-addon1">
+			  <span class="remind">请输入正确的11位手机号码</span>    
+		  </div>
+		  <div class="input-group">
+			  <span class="input-group-addon" id="basic-addon3"><span>※</span>&nbsp;邮箱</span>
+			  <input type="email" class="form-control" placeholder="例：123456789@qq.com" aria-describedby="basic-addon1">
+		  </div>
+       </div>
+       <div class="teaminformation">
+          <span class="team">短袖尺码</span>
+           <ul class="clothing">
+        	<li><img src="./images/captain/clothing.png"> <span>S</span> </li>
+        	<li><img src="./images/captain/clothing.png" ><span>M</span> </li>
+        	<li><img src="./images/captain/clothing.png" ><span>L</span> </li>
+        	<li><img src="./images/captain/clothing.png" ><span>XL</span> </li>
+        	<li><img src="./images/captain/clothing.png" ><span>XXL</span> </li>
+          </ul>
+          <div class="input-group teaminput">
+			  <span class="input-group-addon" id="basic-addon4"><span>.</span>&nbsp;团队名称</span>
+			  <input type="text" class="form-control" placeholder="请输入团队名称" aria-describedby="basic-addon1">
+		  </div>
+		  <!-- 参赛宣言 -->
+		  <span class="indent team"><i>*</i> 参赛宣言</span>
+		  <div class="input-group teaminput">
+		      <textarea class="form-control" rows="3" placeholder="限15字以内。"></textarea>
+		  </div>
+		  <!-- 上传照片 -->
+		  <span class="indent team"><i>*</i> 上传个人照片</span>
+		   <div class="ibox-content">
+				<div class="teamUp">
+					<div id="crop-avatar">
+						<div class="avatar-view" title="Change Logo Picture">
+						</div>
+					</div>
+					<span class="basetext">(注：jpg或png格式，大小2m以内)</span>
+				</div>
+		   </div>
+			<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<form class="avatar-form" action="" enctype="multipart/form-data" method="post">
+							<div class="modal-header">
+								<button class="close" data-dismiss="modal" type="button">&times;</button>
+								<h4 class="modal-title" id="avatar-modal-label">图片上传</h4>
+							</div>
+							<div class="modal-body">
+								<div class="avatar-body">
+									<div class="avatar-upload">
+										<input class="avatar-src" name="avatar_src" type="hidden">
+										<input class="avatar-data" name="avatar_data" type="hidden">
+										<label for="avatarInput">图片上传</label>
+										<input class="avatar-input" id="avatarInput" name="avatar_file" type="file"></div>
+									<div class="row">
+										<div class="col-md-9">
+											<div class="avatar-wrapper"></div>
+										</div>
+										<div class="col-md-3">
+											<div class="avatar-preview preview-lg"></div>
+											<div class="avatar-preview preview-md"></div>
+											<div class="avatar-preview preview-sm"></div>
+										</div>
+									</div>
+									<div class="row avatar-btns">
+										<div class="col-md-9">
+											<div class="btn-group">
+												<button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>
+											</div>
+											<div class="btn-group">
+												<button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<button class="btn btn-success btn-block avatar-save" type="submit"><i class="fa fa-save"></i> 保存修改</button>
+										</div>
+									</div>
+								</div>
+							</div>
+			  		</form>
+			  	</div>
+			  </div>
+			</div>
+			<div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+			<span class="indent team"><i>&nbsp;</i> 上传团队照片</span>
+		   <div class="ibox-content">
+				<div class="teamUp">
+					<div id="crop-avatar">
+						<div class="avatar-view" title="Change Logo Picture">
+						</div>
+					</div>
+					<span class="basetext">(注：jpg或png格式，大小2m以内)</span>
+				</div>
+		   </div>
+			<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<form class="avatar-form" action="" enctype="multipart/form-data" method="post">
+							<div class="modal-header">
+								<button class="close" data-dismiss="modal" type="button">&times;</button>
+								<h4 class="modal-title" id="avatar-modal-label">图片上传</h4>
+							</div>
+							<div class="modal-body">
+								<div class="avatar-body">
+									<div class="avatar-upload">
+										<input class="avatar-src" name="avatar_src" type="hidden">
+										<input class="avatar-data" name="avatar_data" type="hidden">
+										<label for="avatarInput">图片上传</label>
+										<input class="avatar-input" id="avatarInput" name="avatar_file" type="file"></div>
+									<div class="row">
+										<div class="col-md-9">
+											<div class="avatar-wrapper"></div>
+										</div>
+										<div class="col-md-3">
+											<div class="avatar-preview preview-lg"></div>
+											<div class="avatar-preview preview-md"></div>
+											<div class="avatar-preview preview-sm"></div>
+										</div>
+									</div>
+									<div class="row avatar-btns">
+										<div class="col-md-9">
+											<div class="btn-group">
+												<button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>
+											</div>
+											<div class="btn-group">
+												<button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<button class="btn btn-success btn-block avatar-save" type="submit"><i class="fa fa-save"></i> 保存修改</button>
+										</div>
+									</div>
+								</div>
+							</div>
+			  		</form>
+			  	</div>
+			  </div>
+			</div>
+			<div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+			<!-- 隔断 -->
+            <span class="partition"></span>
+            <div class="zhushi"> <i style="color:red">*</i> 为必填选项</div>
+            <div class="agreement">
+                <input type="checkbox" name="" value="" />
+                <a href="">我已阅读参赛声明</a>
+            </div>
+         </div>
+         <table></table>
+    </form>
+    <button type="submit" name="" onclick="submit(e)" id="submit">提交</button>
+    <!-- 团队信息 -->
+    <script src="cropper/cropper.min.js"></script>
+	<script src="sitelogo/sitelogo.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="layui.js"></script>
+    <script>
+     function submit(e){
+		    document.getElementById("loginForm").submit();//表单提交  
+            $('div.signsuccess').fadeIn();
+            $('body').addClass('cover');
+        }
+       $('div.signsuccess>successTan>img.kill').click(function(){
+            $('div.signsuccess').fadeOut();  
+            $('body').removeClass('cover');
+          })   
+    </script>
+</body>
+</html>

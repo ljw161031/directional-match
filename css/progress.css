@@ -1,0 +1,64 @@
+body{
+    
+    margin:0;
+    padding:0;
+    background-image:url(../images/progress/body_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+div.banner_show>img{
+   width:90%;
+   display:block; 
+   margin:auto; 
+}
+div.banner_show{
+    position: relative;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem; 
+}
+div.mask{
+    height:50%; 
+    width:90%;
+    position: absolute;
+    bottom:0.5rem;
+    left:5%;
+}
+div.mask>div.statistical{
+    height:100%;
+    display:flex;
+    align-items:flex-end;
+    /* padding-bottom:0.2rem; */
+    border:1px solid;
+    background:  linear-gradient(to top, rgba(1, 91, 181,0.5), rgba(1, 91, 181,0)); 
+}
+div.mask>div.statistical>div{
+   width:50%;
+   text-align: center;
+   font-size:1rem;
+   color: #EAC600;
+}
+div.mask>div.statistical>div:nth-child(2){
+   position: relative; 
+   border-left:0.5px solid #fff;
+}
+div.mask>div.statistical>div:nth-child(2)>img{
+    position: absolute;
+    width:34px;  
+    right:0.1rem;
+    bottom:0; 
+}
+div.mask>div.statistical>div>span{
+    display:block
+}
+div.mask>div.statistical>div>span:nth-child(2){
+    font-size:0.7rem;
+    color:#BBBBBB;
+ }
+div.teamtitle{
+    width:2.48rem;
+    height:0.3rem;
+    border:1px solid #fff;
+    /* background-image:url(../images/progress/teamtitle.png);
+    background-repeat: no-repeat;
+    background-size: 100%; */
+}
